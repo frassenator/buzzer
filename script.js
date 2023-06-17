@@ -14,7 +14,7 @@ function joinGame() {
 
 function authenticateHost() {
     let password = document.getElementById("password").value;
-    if (password === "password") {
+    if (password === "test123") {
         isHost = true;
         document.getElementById("hostControls").style.display = "block";
     } else {
