@@ -1,0 +1,24 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+input[type="text"], button {
+    margin: 10px;
+}
+
+#hostView {
+    display: none;
+}
+
+#firstPlayer {
+    font-weight: bold;
+}
