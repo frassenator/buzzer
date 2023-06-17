@@ -57,13 +57,3 @@ function authenticateHost() {
         alert("Invalid password. You are not the game show host.");
     }
 }
-
-// Simulating the buzzer click event
-function simulateBuzzerClick() {
-    if (players.length > 0) {
-        let screenName = players[0];
-        let timestamp = new Date().getTime();
-        buzzerClicks[screenName] = timestamp;
-        displayFirstPlayer();
-    }
-}
