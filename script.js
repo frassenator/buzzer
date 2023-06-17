@@ -7,16 +7,20 @@ function joinGame() {
     if (screenName.trim() !== "") {
         players.push(screenName);
         document.getElementById("playerView").style.display = "none";
-        document.getElementById("hostView").style.display = "block";
-        document.getElementById("resetButton").disabled = false;
+        if (isHost) {
+            document.getElementById("hostView").style.display = "block";
+            document.getElementById("resetButton").disabled = false;
+        }
     }
 }
 
 function authenticateHost() {
     let password = document.getElementById("password").value;
-    if (password === "test123") {
+    if (password === "password") {
         isHost = true;
-        document.getElementById("hostControls").style.display = "block";
+        document.getElementById("hostControls").style.display = "none";
+        document.getElementById("hostView").style.display = "block";
+        document.getElementById("resetButton").disabled = false;
     } else {
         alert("Invalid password. You are not the game show host.");
     }
