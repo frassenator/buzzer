@@ -6,9 +6,8 @@ function joinGame() {
     let screenName = document.getElementById("screenName").value;
     if (screenName.trim() !== "") {
         players.push(screenName);
-        document.getElementById("playerView").style.display = "none";
         if (isHost) {
-            document.getElementById("hostView").style.display = "block";
+            document.getElementById("hostView").style.display = "none";
             document.getElementById("resetButton").disabled = false;
         }
     }
