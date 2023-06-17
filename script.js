@@ -1,5 +1,6 @@
 let players = [];
 let firstPlayer = "";
+let isHost = false;
 
 function joinGame() {
     let screenName = document.getElementById("screenName").value;
@@ -7,12 +8,27 @@ function joinGame() {
         players.push(screenName);
         document.getElementById("playerView").style.display = "none";
         document.getElementById("hostView").style.display = "block";
+        document.getElementById("resetButton").disabled = false;
+    }
+}
+
+function authenticateHost() {
+    let password = document.getElementById("password").value;
+    if (password === "password") {
+        isHost = true;
+        document.getElementById("hostControls").style.display = "block";
+    } else {
+        alert("Invalid password. You are not the game show host.");
     }
 }
 
 function resetBuzzer() {
-    firstPlayer = "";
-    document.getElementById("firstPlayer").innerHTML = "";
+    if (isHost) {
+        firstPlayer = "";
+        document.getElementById("firstPlayer").innerHTML = "";
+    } else {
+        alert("You are not authorized to reset the buzzer.");
+    }
 }
 
 // Simulating the buzzer click event
