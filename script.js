@@ -49,6 +49,7 @@ function authenticateHost() {
     if (password == "password") {
         isHost = true;
         alert("Logged in as host");
+        document.getElementById("playerView").style.display = "none";
         document.getElementById("hostControls").style.display = "none";
         document.getElementById("hostView").style.display = "block";
         document.getElementById("resetButton").disabled = false;
