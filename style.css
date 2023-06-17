@@ -19,10 +19,6 @@ input[type="text"], input[type="password"], button {
     margin: 10px;
 }
 
-#hostControls {
-    display: none;
-}
-
 #hostView {
     display: none;
 }
