@@ -3,9 +3,10 @@ let buzzerClicks = {};
 let isHost = false;
 
 function joinGame() {
-    let screenName = document.getElementById("actualScreenName").value;
+    let screenName = document.getElementById("screenName").value;
     if (screenName.trim() !== "") {
         players.push(screenName);
+        document.getElementById("actualScreenName").value = screenName;
         document.getElementById("userControls").style.display = "none";
         document.getElementById("hostView").style.display = "none";
         document.getElementById("hostControls").style.display = "none";
