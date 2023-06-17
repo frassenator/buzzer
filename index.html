@@ -8,9 +8,11 @@
     <div class="container">
         <h1>Game Show Buzzer</h1>
         <div id="playerView">
-            <h2>Your Screen Name</h2>
-            <input type="text" id="screenName" placeholder="Enter your screen name">
-            <button onclick="joinGame()">Join Game</button>
+            <h2>Your Screen Name <span id="actualScreenName"></span></h2>
+            <div class="userControls">
+                <input type="text" id="screenName" placeholder="Enter your screen name">
+                <button onclick="joinGame()">Join Game</button>
+            </div>
             <button onclick="buzz()">Buzz!</button>
         </div>
         <div id="hostControls">
