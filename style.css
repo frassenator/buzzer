@@ -11,8 +11,16 @@ h2 {
     font-size: 18px;
 }
 
-input[type="text"], button {
+h3 {
+    font-size: 16px;
+}
+
+input[type="text"], input[type="password"], button {
     margin: 10px;
+}
+
+#hostControls {
+    display: none;
 }
 
 #hostView {
